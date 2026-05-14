@@ -1,8 +1,6 @@
 package safe
 
-import (
-	"testing"
-)
+import "testing"
 
 func assertEqual[T comparable](t *testing.T, got, want T) {
 	t.Helper()
