@@ -1,9 +1,12 @@
 package hello
 
-func Hello(name string) string {
-	if name == "" {
-		return "Hello, world!"
-	}
+import "errors"
 
-	return "Hello, " + name + "!"
+var ErrEmptyName = errors.New("name cannot be empty")
+
+func Hello(name string) (string, error) {
+	if name == "" {
+		return "", ErrEmptyName
+	}
+	return "Hello, " + name, nil
 }
