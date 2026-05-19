@@ -34,7 +34,7 @@ func TestTextStat(t *testing.T) {
 			t.Parallel()
 			got := WordCount(tt.s)
 
-			assert.Equal(t, got, tt.want)
+			assert.Equal(t, tt.want, got)
 		})
 	}
 }

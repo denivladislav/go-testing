@@ -31,7 +31,7 @@ func TestSlug(t *testing.T) {
 			t.Parallel()
 			got := HashSHA256(tt.s)
 
-			assert.Equal(t, got, tt.want)
+			assert.Equal(t, tt.want, got)
 		})
 	}
 }
